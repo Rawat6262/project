@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .di
+    {
+        height: 180px;
+        width: 100vw;
+        border: 2px solid;
+        align-content: center;
+    }
+    *{
+        text-align: center;
+        padding: 0px;
+        margin: 8px;
+
+    }
+    #select{
+        color: black;
+    height: 34px;
+    width: 20vw;
+border-color: brown;
+}
+    #oo
+    {
+        height: 24px;
+        width:95vw;
+
+    }
+    .vo
+    {
+        
+        background-color: black;
+        color: white;
+        height: 24px;
+        width:95vw;
+border: 3px solid;
+box-shadow: 10px;
+border-color:brown;
+    }
+    button:hover{
+        background-color: aqua;
+        color: black;
+
+    }
+   tr th  button{
+        height: 33px;
+        width: 55px;
+        border-radius: 24px;
+        position: static;
+font-weight: bold;
+background-color: rgb(200, 41, 20);    
+color: rgb(3, 2, 2);
+}
+    #out{
+        height: 20vh;
+        width: 100vw;
+        position: relative;
+        right: 27px;
+        top: 30px;
+        display: none;
+
+    }
+    button{
+        height: 33px;
+        position: relative;
+        top: 10px;
+        background-color: rgb(200, 41, 20);
+    }
+    a{
+        color: rgb(3, 2, 2);
+        font-style: normal;
+font-style: inherit;
+text-decoration: none;
+padding: 3px;
+font-size: medium;
+font-weight: bold;
+    }
+body{
+    background-color: rgb(46, 104, 145);
+}
+
+</style>
+<script>
+function vali()
+{
+let a=document.forms["form"]["name"].value;
+let ab=document.forms["form"]["roll"].value;
+let abc=document.forms["form"]["sel"].value;
+if(a=="")
+{
+    alert("enter the value in name box");
+    document.getElementById("nam").style.backgroundColor="red";
+    return false;
+}
+else if(ab=="")
+{
+    alert("enter the value in rolln box");
+    document.getElementById("rollno").style.backgroundColor="red";
+    return false;
+}
+if(abc=="")
+{
+    alert("enter the value in rolln box");
+    document.getElementById("option").style.backgroundColor="red";
+    return false;
+}
+if(abc=="9:10-AM")
+{
+    document.getElementById("out").style.display="block";
+return false;
+}
+if(abc=="9:20-AM")
+{
+    document.getElementById("out").style.display="block";
+return false;
+}
+if(abc=="9:30-AM")
+{
+    document.getElementById("out").style.display="block";
+return false;
+}
+}
+</script>
+
+</head>
+<body>
+    <form name="form" id="select" onsubmit="return vali()">
+        <table  class="vo" >
+            <tr>
+        <th><h1>
+            PCTE GROUP OF INSTITUTES</h1></th>
+    </tr>    
+</table>   
+<h1 align="center">
+<table  Id="oo" >     
+    <tr>
+        <th>
+        F_name
+        <input type="textbox" name="name" placeholder="Full_Name" id="nam">
+    </th>
+    </tr>
+<tr>
+    <th>    Enter Your rollno
+    
+    <input type="text" placeholder="Enter the rollno" id="rollno" name="roll"></tH>
+</tr>
+    <tr>
+        <th>
+        Enter  your Reporting Time</label>
+    <select name="sel" id="option">
+    <option></option>
+    <option>9:10-AM</option>
+    <option>9:20-AM</option>
+    <option>9:30-AM</option>
+    <option>10:00-AM</option>
+</th>
+</tr>
+<tr>
+    <th>
+        <button type="submit" name="sub">Submit</button>
+    </th>
+</tr>
+</select>
+</table>
+</form>
+<div id="out" >
+<h1>Punieshment For Coming late</h1>
+    <button><a href="puni.html">Punieshment</a></button>
+</div>
+</body>
+</html>
